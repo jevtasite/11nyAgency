@@ -1,0 +1,38 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: "Marcus Rivera",
+    role: "Team Manager",
+    organization: "Phoenix Strikers FC",
+    content: "Petra's graphics transformed our social media presence. The bold, dynamic designs perfectly capture our team's energy and have significantly increased our fan engagement.",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Sarah Chen",
+    role: "Marketing Director",
+    organization: "Elite Basketball League",
+    content: "Working with Petra was an absolute game-changer. Her attention to detail and ability to deliver high-impact visuals on tight deadlines is unmatched. Highly recommend!",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Jake Thompson",
+    role: "Professional Athlete",
+    organization: "Independent",
+    content: "Petra created my personal brand graphics and they're absolutely fire. The designs are clean, bold, and exactly what I needed to stand out. True professional!",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Alex Morrison",
+    role: "Social Media Manager",
+    organization: "Thunder Esports",
+    content: "The quality and creativity Petra brings to every project is outstanding. Our announcement graphics now have that premium look that sets us apart from the competition.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    rating: 5,
+  },
+];

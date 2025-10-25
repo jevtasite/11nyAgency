@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* DrukCyr Super - Web-optimized font */
+/* Druk Wide Medium - Web-optimized font */
 @font-face {
   font-family: 'Druk';
-  src: url('/fonts/DrukCyr-Super/Web%20Fonts/e2a2b8ac8b9384b186ba014402f0e8fe.woff2') format('woff2'),
-       url('/fonts/DrukCyr-Super/Web%20Fonts/e2a2b8ac8b9384b186ba014402f0e8fe.woff') format('woff'),
-       url('/fonts/DrukCyr-Super/DrukCyr-Super.woff2') format('woff2'),
-       url('/fonts/DrukCyr-Super/DrukCyr-Super.woff') format('woff');
-  font-weight: normal;
+  src: url('/fonts/Druk%20Wide%20Medium/Druk%20Wide%20Medium.woff2') format('woff2'),
+       url('/fonts/Druk%20Wide%20Medium/Druk%20Wide%20Medium.woff') format('woff'),
+       url('/fonts/Druk%20Wide%20Medium/Druk%20Wide%20Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }

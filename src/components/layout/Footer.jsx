@@ -70,9 +70,9 @@ const Footer = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-8 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-6">
           {/* Left Side - Brand */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -83,18 +83,18 @@ const Footer = () => {
           >
             {/* Logo */}
             <div>
-              <h3 className="text-4xl md:text-5xl font-display text-brand-purple mb-4 tracking-normal">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-display text-brand-purple mb-4 tracking-normal">
                 PETRA NEŠIĆ
               </h3>
               <div className="w-20 h-1 bg-gradient-to-r from-brand-purple to-light-purple rounded-full mb-6" />
-              <p className="text-pure-white/80 text-base md:text-lg leading-relaxed max-w-md">
+              <p className="text-pure-white/80 text-sm md:text-base lg:text-lg leading-relaxed max-w-md">
                 Sports graphic designer specializing in creating explosive visuals that bring athletic energy to life.
               </p>
             </div>
           </motion.div>
 
           {/* Right Side - Links & Social */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
             {/* Navigation */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -102,8 +102,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-xl font-display text-pure-white mb-6 flex items-center gap-2">
-                <Sparkles size={18} className="text-brand-purple" />
+              <h4 className="text-lg md:text-xl font-display text-pure-white mb-6">
                 Navigate
               </h4>
               <nav className="flex flex-col gap-3">
@@ -115,7 +114,7 @@ const Footer = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
-                    className="text-pure-white/70 hover:text-brand-purple transition-colors duration-200 text-base w-fit relative group flex items-center gap-2"
+                    className="text-pure-white/70 hover:text-brand-purple transition-colors duration-200 text-xs md:text-sm w-fit relative group flex items-center gap-2"
                   >
                     <span className="w-0 h-0.5 bg-brand-purple group-hover:w-6 transition-all duration-300" />
                     <span>{link.name}</span>
@@ -131,7 +130,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="text-xl font-display text-pure-white mb-6">Connect</h4>
+              <h4 className="text-lg md:text-xl font-display text-pure-white mb-6">Connect</h4>
               <div className="space-y-4">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
@@ -178,7 +177,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="border-t border-brand-purple/20 pt-8"
+          className="border-t border-brand-purple/20 pt-6"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-pure-white/40 text-sm text-center md:text-left">

@@ -83,32 +83,32 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-display mb-8 text-center lg:text-left">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-display mb-8 text-center lg:text-left">
               MEET THE <span className="text-brand-purple">DESIGNER</span>
             </h2>
 
-            <div className="space-y-5 text-pure-white/70 leading-relaxed text-lg">
+            <div className="space-y-5 text-pure-white/70 leading-relaxed text-base md:text-lg">
               <p>
-                Hi! I'm Petra Nešić, a passionate sports graphic designer who specializes
-                in creating high-energy visuals that capture the explosive nature of athletics.
+                I turn moments into movements. Every graphic I create is designed to stop the scroll,
+                capture attention, and ignite emotion—because in sports, mediocre isn't an option.
               </p>
 
               <p>
-                With years of experience working with football, basketball, and tennis teams,
-                I've developed a unique style that combines bold typography, dynamic compositions,
-                and vibrant colors to make every graphic feel alive with motion.
+                For over three years, I've partnered with football clubs, basketball leagues, and athletes
+                who refuse to blend in. My work doesn't just announce—it dominates. Bold typography meets
+                kinetic energy, creating visuals that feel as powerful as the game itself.
               </p>
 
               <p>
-                My goal is to help teams and athletes stand out with graphics that not only
-                look amazing but also tell their story and connect with fans on an emotional level.
+                Your brand deserves more than templates. It deserves graphics that make fans stop, stare,
+                and share. Let's create visuals that don't just represent your team—they amplify it.
               </p>
             </div>
 
             {/* Skills */}
             <div className="mt-10">
               <div className="flex items-center gap-3 mb-6">
-                <h3 className="text-2xl md:text-3xl font-display text-brand-purple">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-display text-brand-purple">
                   Core Skills
                 </h3>
                 <div className="flex-1 h-px bg-gradient-to-r from-brand-purple/30 to-transparent" />

@@ -56,7 +56,7 @@ const Header = () => {
             >
               <div className="flex items-center gap-3">
                 <div className="flex flex-col">
-                  <span className="text-xl md:text-2xl font-display text-pure-white tracking-normal leading-none">
+                  <span className="text-base md:text-lg lg:text-xl font-display text-pure-white tracking-normal leading-none">
                     PETRA NEŠIĆ
                   </span>
                   <div className="flex items-center gap-2 mt-1">
@@ -67,7 +67,7 @@ const Header = () => {
                       transition={{ duration: 0.3 }}
                     />
                     <span className="text-[10px] text-brand-purple/70 tracking-[0.2em] uppercase font-medium">
-                      Sports Graphics
+                      Graphics
                     </span>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const Header = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="relative px-5 py-2 text-pure-white/80 hover:text-pure-white transition-colors duration-300 font-display text-lg group"
+                    className="relative px-4 md:px-5 py-2 text-pure-white/80 hover:text-pure-white transition-colors duration-300 font-display text-xs md:text-sm group"
                   >
                     <span className="relative z-10">{item.label}</span>
 
@@ -117,7 +117,7 @@ const Header = () => {
               {/* Hire CTA */}
               <a
                 href="#contact"
-                className="ml-4 px-6 py-3 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg hover:shadow-lg hover:shadow-brand-purple/50 hover:from-light-purple hover:to-brand-purple transition-all duration-200 flex items-center gap-2 font-display text-lg relative overflow-hidden group"
+                className="ml-4 px-5 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg hover:shadow-lg hover:shadow-brand-purple/50 hover:from-light-purple hover:to-brand-purple transition-all duration-200 flex items-center gap-2 font-display text-xs md:text-sm relative overflow-hidden group"
               >
                 {/* Shine effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -203,7 +203,7 @@ const Header = () => {
                   }}
                   className="relative group"
                 >
-                  <span className="text-5xl font-display text-pure-white group-hover:text-brand-purple transition-colors duration-300">
+                  <span className="text-3xl font-display text-pure-white group-hover:text-brand-purple transition-colors duration-300">
                     {item.label}
                   </span>
                   <motion.div

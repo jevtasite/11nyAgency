@@ -70,10 +70,10 @@ const Contact = () => {
             <span className="text-brand-purple text-sm font-display">Let's Work Together</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display mb-4 md:mb-6 px-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-display mb-4 md:mb-6 px-4">
             LET'S CREATE <span className="text-brand-purple">SOMETHING AMAZING</span>
           </h2>
-          <p className="text-base md:text-xl text-pure-white/60 max-w-2xl mx-auto leading-relaxed px-4">
+          <p className="text-sm md:text-base lg:text-xl text-pure-white/60 max-w-2xl mx-auto leading-relaxed px-4">
             Ready to elevate your team's visual identity? Get in touch and let's bring your vision to life.
           </p>
         </motion.div>
@@ -146,17 +146,17 @@ const Contact = () => {
               </div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-display text-pure-white mb-3 md:mb-4">
+                <h3 className="text-lg md:text-2xl lg:text-3xl font-display text-pure-white mb-3 md:mb-4">
                   READY TO START YOUR PROJECT?
                 </h3>
-                <p className="text-pure-white/90 text-sm md:text-base lg:text-lg mb-6 md:mb-8 max-w-xl mx-auto px-4">
+                <p className="text-pure-white/90 text-xs md:text-sm lg:text-base mb-6 md:mb-8 max-w-xl mx-auto px-4">
                   Whether it's a single graphic or a complete visual identity, I'm here to help your team stand out.
                 </p>
                 <a
                   href="mailto:contact@petranesic.com"
-                  className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-10 py-4 md:py-5 bg-pure-white text-brand-purple font-display text-base md:text-lg rounded-lg md:rounded-xl hover:bg-true-black hover:text-pure-white hover:shadow-2xl hover:shadow-pure-white/20 transition-all duration-200"
+                  className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-10 py-3 md:py-5 bg-pure-white text-brand-purple font-display text-sm md:text-base lg:text-lg rounded-lg md:rounded-xl hover:bg-true-black hover:text-pure-white hover:shadow-2xl hover:shadow-pure-white/20 transition-all duration-200"
                 >
-                  <Send size={20} className="md:w-[22px] md:h-[22px]" />
+                  <Send size={18} className="md:w-[20px] md:h-[20px]" />
                   <span>SEND ME A MESSAGE</span>
                 </a>
               </div>
