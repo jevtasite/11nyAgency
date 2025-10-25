@@ -37,19 +37,23 @@ const Portfolio = () => {
             {/* Minimal Filter Pills */}
             <div className="flex gap-2 bg-true-black/50 p-2 rounded-2xl backdrop-blur-sm border border-brand-purple/20 mx-auto lg:mx-0">
               {categories.map((category) => (
-                <motion.button
+                <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-2.5 rounded-xl font-display text-sm transition-all duration-300 ${
+                  className={`group relative px-6 py-2.5 rounded-xl font-display text-sm transition-all duration-200 overflow-hidden ${
                     activeCategory === category.id
                       ? 'bg-brand-purple text-pure-white shadow-lg shadow-brand-purple/30'
-                      : 'text-pure-white/60 hover:text-pure-white hover:bg-pure-white/5'
+                      : 'text-pure-white/60 hover:text-pure-white hover:bg-brand-purple/20'
                   }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                 >
-                  {category.label}
-                </motion.button>
+                  {/* Shine effect on hover (only for inactive buttons) */}
+                  {activeCategory !== category.id && (
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                    </div>
+                  )}
+                  <span className="relative z-10">{category.label}</span>
+                </button>
               ))}
             </div>
           </div>
@@ -72,8 +76,7 @@ const Portfolio = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative overflow-hidden rounded-lg bg-true-black cursor-pointer"
+                className="group relative overflow-hidden rounded-lg bg-true-black cursor-pointer hover:-translate-y-2 transition-transform duration-200"
               >
                 {/* Image Container */}
                 <div className="relative overflow-hidden aspect-[4/5]">

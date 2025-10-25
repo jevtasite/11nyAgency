@@ -36,11 +36,11 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden border-4 border-brand-purple/40 shadow-2xl shadow-brand-purple/20">
+              <div className="aspect-square rounded-2xl overflow-hidden border-4 border-brand-purple/40 shadow-2xl shadow-brand-purple/20 bg-gradient-to-br from-brand-purple/20 via-deep-charcoal to-true-black flex items-center justify-center">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
+                  src="https://images.unsplash.com/photo-1583795128727-6ec3642408f8?w=600&h=600&fit=crop"
                   alt="Petra Nešić"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover opacity-90"
                 />
               </div>
 
@@ -107,17 +107,28 @@ const About = () => {
 
             {/* Skills */}
             <div className="mt-10">
-              <h3 className="text-2xl font-display text-brand-purple mb-5">
-                Core Skills
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {['Adobe Photoshop', 'Adobe Illustrator', 'Typography', 'Sports Branding', 'Social Media Graphics'].map((skill) => (
-                  <span
+              <div className="flex items-center gap-3 mb-6">
+                <h3 className="text-2xl md:text-3xl font-display text-brand-purple">
+                  Core Skills
+                </h3>
+                <div className="flex-1 h-px bg-gradient-to-r from-brand-purple/30 to-transparent" />
+              </div>
+              <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
+                {['Adobe Photoshop', 'Adobe Illustrator', 'Typography', 'Sports Branding', 'Social Media Graphics'].map((skill, index) => (
+                  <motion.div
                     key={skill}
-                    className="px-5 py-3 bg-brand-purple/20 text-pure-white rounded-lg text-base border border-brand-purple/30 hover:bg-brand-purple hover:border-brand-purple hover:shadow-lg hover:shadow-brand-purple/30 transition-all duration-200 cursor-default"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="group relative px-5 py-3 bg-brand-purple/10 text-pure-white rounded-xl text-base border border-brand-purple/30 hover:bg-brand-purple hover:border-brand-purple hover:shadow-lg hover:shadow-brand-purple/40 transition-all duration-200 cursor-default overflow-hidden"
                   >
-                    {skill}
-                  </span>
+                    {/* Shine effect */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pure-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                    </div>
+                    <span className="relative z-10 font-medium">{skill}</span>
+                  </motion.div>
                 ))}
               </div>
             </div>

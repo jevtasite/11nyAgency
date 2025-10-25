@@ -30,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-true-black overflow-hidden">
+    <section id="home" className="relative min-h-screen bg-true-black overflow-hidden">
       {/* Unique Animated Background - Diagonal Stripes */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.03]">
@@ -147,26 +147,30 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9 }}
               >
-                <motion.a
+                <a
                   href="#portfolio"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-10 py-5 bg-brand-purple text-pure-white font-display text-lg rounded-lg hover:shadow-purple-glow-lg transition-all duration-300"
+                  className="group inline-flex items-center gap-2 px-10 py-5 bg-brand-purple text-pure-white font-display text-lg rounded-lg hover:shadow-lg hover:shadow-brand-purple/50 hover:bg-light-purple transition-all duration-200 relative overflow-hidden"
                 >
-                  EXPLORE WORK
-                  <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
-                </motion.a>
-                <motion.a
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pure-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                  </div>
+                  <span className="relative z-10">EXPLORE WORK</span>
+                  <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform duration-200 relative z-10" />
+                </a>
+                <a
                   href="https://instagram.com/petragfx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-10 py-5 border-2 border-pure-white/20 text-pure-white font-display text-lg rounded-lg hover:bg-pure-white/5 hover:border-pure-white/40 transition-all duration-300"
+                  className="group inline-flex items-center gap-2 px-10 py-5 border-2 border-pure-white/20 text-pure-white font-display text-lg rounded-lg hover:bg-brand-purple/20 hover:border-brand-purple transition-all duration-200 relative overflow-hidden"
                 >
-                  <Instagram size={22} />
-                  FOLLOW
-                </motion.a>
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                  </div>
+                  <Instagram size={22} className="relative z-10" />
+                  <span className="relative z-10">FOLLOW</span>
+                </a>
               </motion.div>
             </motion.div>
 

@@ -57,7 +57,7 @@ const Header = () => {
               <div className="flex items-center gap-3">
                 <div className="flex flex-col">
                   <span className="text-xl md:text-2xl font-display text-pure-white tracking-normal leading-none">
-                    PETRA NESIC
+                    PETRA NEŠIĆ
                   </span>
                   <div className="flex items-center gap-2 mt-1">
                     <motion.div
@@ -226,10 +226,13 @@ const Header = () => {
                   e.stopPropagation();
                   setIsMobileMenuOpen(false);
                 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg text-xl font-display shadow-purple-glow-lg"
+                className="px-10 py-4 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg text-xl font-display shadow-lg shadow-brand-purple/50 relative overflow-hidden group"
               >
-                Hire Me
+                {/* Shine effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pure-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                </div>
+                <span className="relative z-10">Hire Me</span>
               </motion.a>
 
               {/* Close hint */}

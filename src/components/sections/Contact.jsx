@@ -112,8 +112,8 @@ const Contact = () => {
                     </div>
 
                     <div className="flex items-start gap-4 md:gap-5 relative z-10">
-                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-brand-purple/20 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-purple/40 group-hover:shadow-lg group-hover:shadow-brand-purple/30 transition-all duration-200">
-                        <Icon className="text-brand-purple group-hover:text-light-purple transition-colors duration-200" size={24} />
+                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-brand-purple/20 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-purple group-hover:shadow-lg group-hover:shadow-brand-purple/50 group-hover:scale-110 transition-all duration-200">
+                        <Icon className="text-brand-purple group-hover:text-pure-white transition-all duration-200 group-hover:scale-110" size={24} />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-xl md:text-2xl font-display text-pure-white mb-1 md:mb-2 group-hover:text-brand-purple transition-colors duration-200">
