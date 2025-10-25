@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(dir:*)",
+      "Bash(xcopy:*)",
+      "Bash(robocopy:*)",
+      "Bash(powershell -Command \"Get-ChildItem -Path petra-portfolio -Recurse | Move-Item -Destination . -Force\")",
+      "Bash(npm run dev:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(find:*)",
+      "Bash(tree:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
