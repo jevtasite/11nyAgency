@@ -69,7 +69,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-accent-pink/10 rounded-full blur-[100px]"
+          className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-[100px]"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
@@ -97,7 +97,7 @@ const Hero = () => {
               className="relative z-10 order-1 text-center lg:text-left"
             >
               {/* Main Heading */}
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-display mb-8 leading-[0.85] tracking-tighter">
+              <h1 className="text-7xl md:text-8xl lg:text-9xl font-display mb-8 leading-[0.85] tracking-normal">
                 <motion.span
                   className="block text-pure-white"
                   initial={{ opacity: 0, x: -30 }}
@@ -122,7 +122,7 @@ const Hero = () => {
                 >
                   DOMINATE
                   <motion.div
-                    className="absolute -bottom-2 left-0 h-1 bg-accent-pink"
+                    className="absolute -bottom-2 left-0 h-1 bg-brand-purple"
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
                     transition={{ delay: 1.2, duration: 0.8 }}
@@ -235,21 +235,32 @@ const Hero = () => {
                     </div>
                   </motion.div>
 
-                  {/* Minimal Dot Navigation */}
-                  <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 flex gap-3">
-                    {portfolioShowcase.map((_, index) => (
-                      <motion.button
-                        key={index}
-                        onClick={() => handleUserInteraction(index)}
-                        className={`transition-all duration-300 rounded-full ${
-                          index === activeIndex
-                            ? 'w-8 h-2 bg-brand-purple'
-                            : 'w-2 h-2 bg-pure-white/20 hover:bg-pure-white/40'
-                        }`}
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 0.9 }}
-                      />
-                    ))}
+                  {/* Navigation Dots with Labels */}
+                  <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+                    <div className="flex gap-3">
+                      {portfolioShowcase.map((_, index) => (
+                        <motion.button
+                          key={index}
+                          onClick={() => handleUserInteraction(index)}
+                          className={`transition-all duration-300 rounded-full cursor-pointer ${
+                            index === activeIndex
+                              ? 'w-8 h-2 bg-brand-purple shadow-lg shadow-brand-purple/50'
+                              : 'w-2 h-2 bg-pure-white/30 hover:bg-brand-purple/60'
+                          }`}
+                          whileHover={{ scale: 1.2 }}
+                          whileTap={{ scale: 0.9 }}
+                          aria-label={`View graphic ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1 }}
+                      className="text-xs text-pure-white/40 font-medium tracking-wider uppercase"
+                    >
+                      Click to explore
+                    </motion.p>
                   </div>
                 </div>
               </div>

@@ -83,8 +83,6 @@ export const portfolioProjects = [
 
 export const categories = [
   { id: 'all', label: 'All' },
-  { id: 'football', label: 'Football' },
-  { id: 'basketball', label: 'Basketball' },
-  { id: 'tennis', label: 'Tennis' },
-  { id: 'other', label: 'Other Sports' },
+  { id: 'featured', label: 'Featured' },
+  { id: 'recent', label: 'Recent' },
 ];

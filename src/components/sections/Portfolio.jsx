@@ -5,50 +5,57 @@ import { portfolioProjects, categories } from '../../data/portfolio';
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const filteredProjects = activeCategory === 'all'
-    ? portfolioProjects
-    : portfolioProjects.filter(project => project.category === activeCategory);
+  const filteredProjects = (() => {
+    if (activeCategory === 'all') return portfolioProjects;
+    if (activeCategory === 'featured') return portfolioProjects.filter(p => p.featured);
+    if (activeCategory === 'recent') return portfolioProjects.slice(0, 4); // First 4 as recent
+    return portfolioProjects;
+  })();
 
   return (
     <section id="portfolio" className="py-20 px-6 bg-deep-charcoal min-h-screen">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+        {/* Section Header with Integrated Filters */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-display mb-4">
-            ALL <span className="text-brand-purple">PROJECTS</span>
-          </h2>
-          <p className="text-lg text-pure-white/70 max-w-2xl mx-auto">
-            Explore my portfolio of explosive sports graphics across various disciplines
-          </p>
-        </motion.div>
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-8">
+            {/* Title */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-4xl md:text-6xl font-display mb-3">
+                SELECTED <span className="text-brand-purple">WORK</span>
+              </h2>
+              <p className="text-lg text-pure-white/60 max-w-xl mx-auto lg:mx-0">
+                A curated collection of high-impact sports graphics
+              </p>
+            </div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-md font-display text-sm md:text-base transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-purple-gradient text-pure-white shadow-purple-glow scale-105'
-                  : 'bg-transparent border-2 border-brand-purple text-brand-purple hover:bg-brand-purple/10 hover:-translate-y-1'
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
+            {/* Minimal Filter Pills */}
+            <div className="flex gap-2 bg-true-black/50 p-2 rounded-2xl backdrop-blur-sm border border-brand-purple/20 mx-auto lg:mx-0">
+              {categories.map((category) => (
+                <motion.button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-2.5 rounded-xl font-display text-sm transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? 'bg-brand-purple text-pure-white shadow-lg shadow-brand-purple/30'
+                      : 'text-pure-white/60 hover:text-pure-white hover:bg-pure-white/5'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {category.label}
+                </motion.button>
+              ))}
+            </div>
+          </div>
+
+          {/* Divider Line */}
+          <div className="h-px bg-gradient-to-r from-transparent via-brand-purple/30 to-transparent" />
         </motion.div>
 
         {/* Portfolio Grid */}
@@ -56,7 +63,7 @@ const Portfolio = () => {
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}

@@ -15,9 +15,17 @@ export default {
         'pure-white': '#ffffff',
       },
       fontFamily: {
-        'display': ['Druk Wide', 'Impact', 'sans-serif'],
-        'body': ['Inter Variable', 'Inter', 'sans-serif'],
-        'accent': ['Monument Extended', 'Arial Black', 'sans-serif'],
+        'display': ['Druk', 'Impact', 'sans-serif'],
+        'body': ['Inter', 'sans-serif'],
+        'accent': ['Druk', 'Impact', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
       },
       fontSize: {
         'h1': '72px',

@@ -56,8 +56,8 @@ const Header = () => {
             >
               <div className="flex items-center gap-3">
                 <div className="flex flex-col">
-                  <span className="text-2xl md:text-3xl font-display text-pure-white tracking-tight leading-none">
-                    PETRA NEŠIĆ
+                  <span className="text-xl md:text-2xl font-display text-pure-white tracking-normal leading-none">
+                    PETRA NESIC
                   </span>
                   <div className="flex items-center gap-2 mt-1">
                     <motion.div
@@ -82,7 +82,7 @@ const Header = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="relative px-5 py-2 text-pure-white/80 hover:text-pure-white transition-colors duration-300 font-medium group"
+                    className="relative px-5 py-2 text-pure-white/80 hover:text-pure-white transition-colors duration-300 font-display text-lg group"
                   >
                     <span className="relative z-10">{item.label}</span>
 
@@ -115,14 +115,16 @@ const Header = () => {
               })}
 
               {/* Hire CTA */}
-              <motion.a
+              <a
                 href="#contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="ml-4 px-5 py-2.5 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg hover:shadow-purple-glow transition-all duration-300 flex items-center gap-2 font-medium"
+                className="ml-4 px-6 py-3 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg hover:shadow-lg hover:shadow-brand-purple/50 hover:from-light-purple hover:to-brand-purple transition-all duration-200 flex items-center gap-2 font-display text-lg relative overflow-hidden group"
               >
-                <span>Hire Me</span>
-              </motion.a>
+                {/* Shine effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pure-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                </div>
+                <span className="relative z-10">Hire Me</span>
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}

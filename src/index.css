@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DrukCyr Super - Web-optimized font */
+@font-face {
+  font-family: 'Druk';
+  src: url('/fonts/DrukCyr-Super/Web%20Fonts/e2a2b8ac8b9384b186ba014402f0e8fe.woff2') format('woff2'),
+       url('/fonts/DrukCyr-Super/Web%20Fonts/e2a2b8ac8b9384b186ba014402f0e8fe.woff') format('woff'),
+       url('/fonts/DrukCyr-Super/DrukCyr-Super.woff2') format('woff2'),
+       url('/fonts/DrukCyr-Super/DrukCyr-Super.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   *, *::before, *::after {
     margin: 0;
@@ -27,6 +39,21 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display leading-display;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .font-display {
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  strong, b {
+    font-weight: normal;
   }
 }
 
