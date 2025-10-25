@@ -61,29 +61,29 @@ const Portfolio = () => {
             {/* Title */}
             <div className="text-center lg:text-left">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-display mb-3">
-                SELECTED <span className="text-brand-purple">WORK</span>
+                SELECTED <span className="text-brand-blue">WORK</span>
               </h2>
               <p className="text-sm md:text-base lg:text-lg text-pure-white/60 max-w-xl mx-auto lg:mx-0">
-                A curated collection of high-impact sports graphics
+                A curated collection of high-impact social media campaigns
               </p>
             </div>
 
             {/* Minimal Filter Pills */}
-            <div className="flex gap-2 bg-true-black/50 p-2 rounded-2xl backdrop-blur-sm border border-brand-purple/20 mx-auto lg:mx-0">
+            <div className="flex gap-2 bg-true-black/50 p-2 rounded-2xl backdrop-blur-sm border border-brand-blue/20 mx-auto lg:mx-0">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`group relative px-6 py-2.5 rounded-xl font-display text-sm transition-all duration-200 overflow-hidden ${
                     activeCategory === category.id
-                      ? 'bg-brand-purple text-pure-white shadow-lg shadow-brand-purple/30'
-                      : 'text-pure-white/60 hover:text-pure-white hover:bg-brand-purple/20'
+                      ? 'bg-brand-blue text-pure-white shadow-lg shadow-brand-blue/30'
+                      : 'text-pure-white/60 hover:text-pure-white hover:bg-brand-blue/20'
                   }`}
                 >
                   {/* Shine effect on hover (only for inactive buttons) */}
                   {activeCategory !== category.id && (
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-blue/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                     </div>
                   )}
                   <span className="relative z-10">{category.label}</span>
@@ -93,7 +93,7 @@ const Portfolio = () => {
           </div>
 
           {/* Divider Line */}
-          <div className="h-px bg-gradient-to-r from-transparent via-brand-purple/30 to-transparent" />
+          <div className="h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
         </motion.div>
 
         {/* Portfolio Grid */}
@@ -115,22 +115,28 @@ const Portfolio = () => {
               >
                 {/* Image Container */}
                 <div className="relative overflow-hidden aspect-[4/5]">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                  {/* Placeholder */}
+                  <div className="w-full h-full bg-gradient-to-br from-true-black via-deep-charcoal to-true-black flex items-center justify-center border-2 border-brand-blue/20 group-hover:border-brand-blue/40 transition-all duration-300">
+                    <div className="text-center px-6 transform group-hover:scale-110 transition-transform duration-300">
+                      <p className="text-2xl md:text-3xl font-display text-brand-blue/40 tracking-wider mb-2">
+                        {project.placeholder}
+                      </p>
+                      <p className="text-xs md:text-sm text-pure-white/30 font-body tracking-wide">
+                        GRAPHIC DESIGN GOES HERE
+                      </p>
+                    </div>
+                  </div>
 
                   {/* Overlay with Icon */}
                   <div className="absolute inset-0 bg-true-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-brand-purple flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
+                    <div className="w-16 h-16 rounded-full bg-brand-blue flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
                       <Maximize2 size={32} className="text-pure-white" />
                     </div>
                   </div>
 
                   {/* Featured Badge */}
                   {project.featured && (
-                    <div className="absolute top-4 right-4 bg-light-purple text-true-black px-3 py-1 rounded-md text-xs font-display">
+                    <div className="absolute top-4 right-4 bg-light-blue text-true-black px-3 py-1 rounded-md text-xs font-display">
                       FEATURED
                     </div>
                   )}
@@ -172,7 +178,7 @@ const Portfolio = () => {
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ delay: 0.1 }}
               onClick={() => setLightboxImage(null)}
-              className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 md:w-14 md:h-14 rounded-full bg-brand-purple hover:bg-light-purple flex items-center justify-center transition-colors duration-200 z-10"
+              className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 md:w-14 md:h-14 rounded-full bg-brand-blue hover:bg-light-blue flex items-center justify-center transition-colors duration-200 z-10"
               aria-label="Close lightbox"
             >
               <X size={28} className="text-pure-white" />
@@ -188,7 +194,7 @@ const Portfolio = () => {
                 e.stopPropagation();
                 goToPrevious();
               }}
-              className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-brand-purple hover:bg-light-purple items-center justify-center transition-colors duration-200 z-10"
+              className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-brand-blue hover:bg-light-blue items-center justify-center transition-colors duration-200 z-10"
               aria-label="Previous image"
             >
               <ChevronLeft size={32} className="text-pure-white" />
@@ -204,7 +210,7 @@ const Portfolio = () => {
                 e.stopPropagation();
                 goToNext();
               }}
-              className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-brand-purple hover:bg-light-purple items-center justify-center transition-colors duration-200 z-10"
+              className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-brand-blue hover:bg-light-blue items-center justify-center transition-colors duration-200 z-10"
               aria-label="Next image"
             >
               <ChevronRight size={32} className="text-pure-white" />
@@ -220,11 +226,17 @@ const Portfolio = () => {
               className="relative max-w-5xl w-full mb-4 md:mb-0"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={lightboxImage.image}
-                alt={lightboxImage.title}
-                className="w-full h-auto max-h-[70vh] md:max-h-[80vh] object-contain rounded-lg shadow-2xl"
-              />
+              {/* Placeholder in lightbox */}
+              <div className="w-full aspect-[4/5] bg-gradient-to-br from-true-black via-deep-charcoal to-true-black flex items-center justify-center border-4 border-brand-blue/30 rounded-lg shadow-2xl max-h-[70vh] md:max-h-[80vh]">
+                <div className="text-center px-12">
+                  <p className="text-4xl md:text-6xl lg:text-7xl font-display text-brand-blue/40 tracking-wider mb-4">
+                    {lightboxImage.placeholder}
+                  </p>
+                  <p className="text-lg md:text-2xl text-pure-white/30 font-body tracking-wide">
+                    GRAPHIC DESIGN GOES HERE
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
             {/* Mobile Navigation Bar */}
@@ -232,20 +244,20 @@ const Portfolio = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="md:hidden fixed bottom-0 left-0 right-0 bg-true-black/90 backdrop-blur-lg border-t border-brand-purple/20 p-4 flex items-center justify-between"
+              className="md:hidden fixed bottom-0 left-0 right-0 bg-true-black/90 backdrop-blur-lg border-t border-brand-blue/20 p-4 flex items-center justify-between"
             >
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   goToPrevious();
                 }}
-                className="w-12 h-12 rounded-full bg-brand-purple hover:bg-light-purple flex items-center justify-center transition-colors duration-200"
+                className="w-12 h-12 rounded-full bg-brand-blue hover:bg-light-blue flex items-center justify-center transition-colors duration-200"
                 aria-label="Previous image"
               >
                 <ChevronLeft size={24} className="text-pure-white" />
               </button>
 
-              <div className="px-4 py-2 bg-brand-purple/80 backdrop-blur-sm rounded-full">
+              <div className="px-4 py-2 bg-brand-blue/80 backdrop-blur-sm rounded-full">
                 <span className="text-pure-white font-display text-sm">
                   {currentImageIndex + 1} / {filteredProjects.length}
                 </span>
@@ -256,7 +268,7 @@ const Portfolio = () => {
                   e.stopPropagation();
                   goToNext();
                 }}
-                className="w-12 h-12 rounded-full bg-brand-purple hover:bg-light-purple flex items-center justify-center transition-colors duration-200"
+                className="w-12 h-12 rounded-full bg-brand-blue hover:bg-light-blue flex items-center justify-center transition-colors duration-200"
                 aria-label="Next image"
               >
                 <ChevronRight size={24} className="text-pure-white" />
@@ -268,7 +280,7 @@ const Portfolio = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="hidden md:block absolute top-8 left-1/2 -translate-x-1/2 px-4 py-2 bg-brand-purple/80 backdrop-blur-sm rounded-full"
+              className="hidden md:block absolute top-8 left-1/2 -translate-x-1/2 px-4 py-2 bg-brand-blue/80 backdrop-blur-sm rounded-full"
             >
               <span className="text-pure-white font-display text-sm">
                 {currentImageIndex + 1} / {filteredProjects.length}

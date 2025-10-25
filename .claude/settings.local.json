@@ -5,7 +5,9 @@
       "Bash(findstr:*)",
       "Bash(taskkill:*)",
       "Bash(powershell -Command:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(find:*)",
+      "Bash(tasklist:*)"
     ],
     "deny": [],
     "ask": []

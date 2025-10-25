@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Instagram, ArrowRight } from 'lucide-react';
+import { Instagram, ArrowRight, Mail } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 // Behance icon component (lucide-react doesn't have Behance, so we'll use a custom SVG)
@@ -16,11 +16,11 @@ const BehanceIcon = ({ size = 20, className = "" }) => (
 );
 
 const Hero = () => {
-  // Portfolio showcase images - just 3 for performance
+  // Portfolio showcase placeholders
   const portfolioShowcase = [
-    '/images/hero/showcase1.jpg',
-    '/images/hero/showcase2.jpg',
-    '/images/hero/showcase3.jpg',
+    { label: 'GRAPHIC DESIGN' },
+    { label: 'SOCIAL MEDIA' },
+    { label: 'BRANDING' },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,7 +50,7 @@ const Hero = () => {
           {[...Array(15)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute h-[2px] w-full bg-brand-purple origin-left"
+              className="absolute h-[2px] w-full bg-brand-blue origin-left"
               style={{
                 top: `${i * 7}%`,
                 transform: 'rotate(-45deg) translateX(-50%)',
@@ -69,7 +69,7 @@ const Hero = () => {
 
         {/* Organic Blob Gradients */}
         <motion.div
-          className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-purple/20 rounded-full blur-[120px]"
+          className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-blue/20 rounded-full blur-[120px]"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -82,7 +82,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-[100px]"
+          className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[100px]"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
@@ -117,7 +117,7 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
                 >
-                  VISUALS
+                  YOUR GAME
                 </motion.span>
                 <motion.span
                   className="block text-pure-white"
@@ -125,17 +125,17 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.45, duration: 0.6 }}
                 >
-                  THAT
+                  HITS
                 </motion.span>
                 <motion.span
-                  className="block text-brand-purple relative inline-block"
+                  className="block text-brand-blue relative inline-block"
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
-                  DOMINATE
+                  DIFFERENT
                   <motion.div
-                    className="absolute -bottom-2 left-0 h-1 bg-brand-purple"
+                    className="absolute -bottom-2 left-0 h-1 bg-brand-blue"
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
                     transition={{ delay: 1.2, duration: 0.8 }}
@@ -149,7 +149,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                Creating bold, high-impact graphics for sports teams and athletes who refuse to blend in
+                When we're on your side. Elevating brands through strategic social media that converts followers into loyal fans.
               </motion.p>
 
 
@@ -162,7 +162,7 @@ const Hero = () => {
               >
                 <a
                   href="#portfolio"
-                  className="group inline-flex items-center gap-2 px-8 md:px-10 py-4 md:py-5 bg-brand-purple text-pure-white font-display text-sm md:text-base rounded-lg hover:shadow-lg hover:shadow-brand-purple/50 hover:bg-light-purple transition-all duration-200 relative overflow-hidden"
+                  className="group inline-flex items-center gap-2 px-8 md:px-10 py-4 md:py-5 bg-brand-blue text-pure-white font-display text-sm md:text-base rounded-lg hover:shadow-lg hover:shadow-brand-blue/50 hover:bg-light-blue transition-all duration-200 relative overflow-hidden"
                 >
                   {/* Shine effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -175,30 +175,28 @@ const Hero = () => {
                 {/* Social Icons */}
                 <div className="flex gap-3">
                   <a
-                    href="https://instagram.com/petragfx"
+                    href="https://instagram.com/eleveny.agency"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-pure-white/10 border-2 border-pure-white/20 text-pure-white rounded-lg hover:bg-brand-purple/30 hover:border-brand-purple transition-all duration-200 relative overflow-hidden"
+                    className="group inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-pure-white/10 border-2 border-pure-white/20 text-pure-white rounded-lg hover:bg-brand-blue/30 hover:border-brand-blue transition-all duration-200 relative overflow-hidden"
                     aria-label="Follow on Instagram"
                   >
                     {/* Shine effect */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-blue/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                     </div>
                     <Instagram size={22} className="relative z-10" />
                   </a>
                   <a
-                    href="https://www.behance.net/petragfx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-pure-white/10 border-2 border-pure-white/20 text-pure-white rounded-lg hover:bg-brand-purple/30 hover:border-brand-purple transition-all duration-200 relative overflow-hidden"
-                    aria-label="Follow on Behance"
+                    href="mailto:eleveny11agency@icloud.com"
+                    className="group inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-pure-white/10 border-2 border-pure-white/20 text-pure-white rounded-lg hover:bg-brand-blue/30 hover:border-brand-blue transition-all duration-200 relative overflow-hidden"
+                    aria-label="Contact via Email"
                   >
                     {/* Shine effect */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-blue/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                     </div>
-                    <BehanceIcon size={22} className="relative z-10" />
+                    <Mail size={22} className="relative z-10" />
                   </a>
                 </div>
               </motion.div>
@@ -218,7 +216,7 @@ const Hero = () => {
 
                   {/* Glow Effect Behind */}
                   <motion.div
-                    className="absolute inset-0 bg-brand-purple/40 blur-[80px] rounded-3xl"
+                    className="absolute inset-0 bg-brand-blue/40 blur-[80px] rounded-3xl"
                     animate={{
                       opacity: [0.4, 0.6, 0.4],
                       scale: [1, 1.05, 1],
@@ -231,7 +229,7 @@ const Hero = () => {
                   />
 
                   {/* Image Card with AnimatePresence */}
-                  <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-brand-purple/40 shadow-2xl bg-true-black">
+                  <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-brand-blue/40 shadow-2xl bg-true-black">
                     <AnimatePresence initial={false}>
                       <motion.div
                         key={activeIndex}
@@ -253,11 +251,17 @@ const Hero = () => {
                         }}
                         className="absolute inset-0"
                       >
-                        <img
-                          src={portfolioShowcase[activeIndex]}
-                          alt="Featured work"
-                          className="w-full h-full object-cover"
-                        />
+                        {/* Placeholder */}
+                        <div className="w-full h-full bg-gradient-to-br from-true-black via-deep-charcoal to-true-black flex items-center justify-center border-2 border-brand-blue/20">
+                          <div className="text-center px-8">
+                            <p className="text-3xl md:text-4xl lg:text-5xl font-display text-brand-blue/40 tracking-wider">
+                              {portfolioShowcase[activeIndex].label}
+                            </p>
+                            <p className="text-sm md:text-base text-pure-white/30 mt-4 font-body tracking-wide">
+                              GOES HERE
+                            </p>
+                          </div>
+                        </div>
 
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-true-black/80 via-transparent to-transparent" />
@@ -277,7 +281,7 @@ const Hero = () => {
                     {/* Simple Progress Bar */}
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-pure-white/10 z-10">
                       <motion.div
-                        className="h-full bg-brand-purple"
+                        className="h-full bg-brand-blue"
                         initial={{ width: '0%' }}
                         animate={{ width: `${((activeIndex + 1) / portfolioShowcase.length) * 100}%` }}
                         transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -294,8 +298,8 @@ const Hero = () => {
                           onClick={() => handleUserInteraction(index)}
                           className={`transition-all duration-300 rounded-full cursor-pointer ${
                             index === activeIndex
-                              ? 'w-8 h-2 bg-brand-purple shadow-lg shadow-brand-purple/50'
-                              : 'w-2 h-2 bg-pure-white/30 hover:bg-brand-purple/60'
+                              ? 'w-8 h-2 bg-brand-blue shadow-lg shadow-brand-blue/50'
+                              : 'w-2 h-2 bg-pure-white/30 hover:bg-brand-blue/60'
                           }`}
                           whileHover={{ scale: 1.2 }}
                           whileTap={{ scale: 0.9 }}

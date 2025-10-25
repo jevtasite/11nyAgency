@@ -42,7 +42,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-true-black/90 backdrop-blur-xl border-b border-brand-purple/10 shadow-2xl"
+            ? "bg-true-black/90 backdrop-blur-xl border-b border-brand-blue/10 shadow-2xl"
             : "bg-transparent"
         }`}
       >
@@ -57,17 +57,17 @@ const Header = () => {
               <div className="flex items-center gap-3">
                 <div className="flex flex-col">
                   <span className="text-base md:text-lg lg:text-xl font-display text-pure-white tracking-normal leading-none">
-                    PETRA NEŠIĆ
+                    11NY
                   </span>
                   <div className="flex items-center gap-2 mt-1">
                     <motion.div
-                      className="h-[2px] bg-brand-purple"
+                      className="h-[2px] bg-brand-blue"
                       initial={{ width: 0 }}
                       animate={{ width: isScrolled ? "40px" : "50px" }}
                       transition={{ duration: 0.3 }}
                     />
-                    <span className="text-[10px] text-brand-purple/70 tracking-[0.2em] uppercase font-medium">
-                      Graphics
+                    <span className="text-[10px] text-brand-blue/70 tracking-[0.2em] uppercase font-medium">
+                      Agency
                     </span>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ const Header = () => {
 
                     {/* Active/Hover Indicator */}
                     <motion.div
-                      className="absolute inset-0 bg-brand-purple/10 rounded-lg"
+                      className="absolute inset-0 bg-brand-blue/10 rounded-lg"
                       initial={false}
                       animate={{
                         opacity: isActive ? 1 : 0,
@@ -96,13 +96,13 @@ const Header = () => {
                       }}
                       transition={{ duration: 0.2 }}
                     />
-                    <div className="absolute inset-0 bg-brand-purple/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    <div className="absolute inset-0 bg-brand-blue/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 
                     {/* Bottom Accent Line */}
                     {isActive && (
                       <motion.div
                         layoutId="activeSection"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-purple"
+                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-blue"
                         transition={{
                           type: "spring",
                           stiffness: 380,
@@ -117,7 +117,7 @@ const Header = () => {
               {/* Hire CTA */}
               <a
                 href="#contact"
-                className="ml-4 px-5 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg hover:shadow-lg hover:shadow-brand-purple/50 hover:from-light-purple hover:to-brand-purple transition-all duration-200 flex items-center gap-2 font-display text-xs md:text-sm relative overflow-hidden group"
+                className="ml-4 px-5 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-brand-blue to-brand-blue/80 text-pure-white rounded-lg hover:shadow-lg hover:shadow-brand-blue/50 hover:from-light-blue hover:to-brand-blue transition-all duration-200 flex items-center gap-2 font-display text-xs md:text-sm relative overflow-hidden group"
               >
                 {/* Shine effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -175,7 +175,7 @@ const Header = () => {
           >
             {/* Animated Background Elements */}
             <motion.div
-              className="absolute top-1/4 right-1/4 w-64 h-64 bg-brand-purple/20 rounded-full blur-[100px]"
+              className="absolute top-1/4 right-1/4 w-64 h-64 bg-brand-blue/20 rounded-full blur-[100px]"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.5, 0.3],
@@ -203,11 +203,11 @@ const Header = () => {
                   }}
                   className="relative group"
                 >
-                  <span className="text-3xl font-display text-pure-white group-hover:text-brand-purple transition-colors duration-300">
+                  <span className="text-3xl font-display text-pure-white group-hover:text-brand-blue transition-colors duration-300">
                     {item.label}
                   </span>
                   <motion.div
-                    className="absolute -bottom-2 left-0 h-1 bg-brand-purple"
+                    className="absolute -bottom-2 left-0 h-1 bg-brand-blue"
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
@@ -226,7 +226,7 @@ const Header = () => {
                   e.stopPropagation();
                   setIsMobileMenuOpen(false);
                 }}
-                className="px-10 py-4 bg-gradient-to-r from-brand-purple to-brand-purple/80 text-pure-white rounded-lg text-xl font-display shadow-lg shadow-brand-purple/50 relative overflow-hidden group"
+                className="px-10 py-4 bg-gradient-to-r from-brand-blue to-brand-blue/80 text-pure-white rounded-lg text-xl font-display shadow-lg shadow-brand-blue/50 relative overflow-hidden group"
               >
                 {/* Shine effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">

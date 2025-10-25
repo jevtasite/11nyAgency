@@ -6,7 +6,7 @@ export const portfolioProjects = [
     client: 'Sports Team',
     year: 2024,
     description: 'Dynamic player announcement graphic with bold typography.',
-    image: '/images/portfolio/project-1.jpg',
+    placeholder: 'PLAYER ANNOUNCEMENT',
     featured: true,
   },
   {
@@ -16,7 +16,7 @@ export const portfolioProjects = [
     client: 'Football Club',
     year: 2024,
     description: 'High-energy match day promotional design.',
-    image: '/images/portfolio/project-2.jpg',
+    placeholder: 'MATCH DAY',
     featured: true,
   },
   {
@@ -26,7 +26,7 @@ export const portfolioProjects = [
     client: 'Athletic Club',
     year: 2024,
     description: 'Bold team branding and identity graphic.',
-    image: '/images/portfolio/project-3.jpg',
+    placeholder: 'TEAM BRANDING',
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ export const portfolioProjects = [
     client: 'Sports Organization',
     year: 2024,
     description: 'Promotional campaign visual design.',
-    image: '/images/portfolio/project-4.jpg',
+    placeholder: 'SPORTS CAMPAIGN',
     featured: false,
   },
   {
@@ -46,7 +46,7 @@ export const portfolioProjects = [
     client: 'Professional Team',
     year: 2024,
     description: 'Championship event promotional graphics.',
-    image: '/images/portfolio/project-5.jpg',
+    placeholder: 'CHAMPIONSHIP',
     featured: false,
   },
   {
@@ -56,7 +56,7 @@ export const portfolioProjects = [
     client: 'Sports League',
     year: 2024,
     description: 'Season highlight promotional design.',
-    image: '/images/portfolio/project-6.jpg',
+    placeholder: 'SEASON HIGHLIGHT',
     featured: false,
   },
 ];

@@ -57,8 +57,8 @@
 }
 
 @layer utilities {
-  .text-gradient-purple {
-    background: linear-gradient(135deg, #7852a9 0%, #9b7bb5 100%);
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #00adf5 0%, #33bdff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -80,10 +80,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7852a9;
+  background: #00adf5;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9b7bb5;
+  background: #33bdff;
 }
