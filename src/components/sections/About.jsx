@@ -57,7 +57,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-deep-charcoal p-6 rounded-xl border border-brand-blue/20 hover:border-brand-blue hover:bg-brand-blue/5 transition-all duration-200 cursor-default relative overflow-hidden group"
+                  className="bg-deep-charcoal p-4 md:p-6 rounded-xl border border-brand-blue/20 hover:border-brand-blue hover:bg-brand-blue/5 transition-all duration-200 cursor-default relative overflow-hidden group"
                 >
                   {/* Shine effect on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -65,10 +65,10 @@ const About = () => {
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="text-5xl font-display text-brand-blue mb-2 group-hover:text-light-blue transition-colors duration-200">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-display text-brand-blue mb-2 group-hover:text-light-blue transition-colors duration-200">
                       {stat.number}
                     </h3>
-                    <p className="text-pure-white/60 text-sm uppercase tracking-wider group-hover:text-pure-white/80 transition-colors duration-200">{stat.label}</p>
+                    <p className="text-pure-white/60 text-xs md:text-sm uppercase tracking-wider group-hover:text-pure-white/80 transition-colors duration-200">{stat.label}</p>
                     <div className="w-12 h-1 bg-brand-blue mt-3 rounded-full group-hover:w-20 group-hover:bg-light-blue transition-all duration-300" />
                   </div>
                 </motion.div>
